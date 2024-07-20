@@ -36,3 +36,21 @@ export const links = createTable(
     urlIndex: index("url_idx").on(example.url),
   }),
 );
+
+export const users = createTable(
+  "user",
+  {
+    id: serial("id").primaryKey(),
+    email: varchar("email", { length: 100 }).unique().notNull(),
+    profileImage: varchar("profile_image", {}).notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date(),
+    ),
+  },
+  (example) => ({
+    emailIndex: index("email_idx").on(example.email),
+  }),
+);

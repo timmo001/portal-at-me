@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 
-export function Menu() {
+export function ThemePicker() {
   const { setTheme } = useTheme();
 
   return (
@@ -23,11 +23,6 @@ export function Menu() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <div className="flex flex-row items-center justify-start gap-1 p-1">
-          <span className="text-sm font-semibold text-gray-500 dark:text-gray-400">
-            Theme
-          </span>
-        </div>
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>
@@ -37,12 +32,6 @@ export function Menu() {
         <DropdownMenuItem onClick={() => setTheme("system")}>
           System
         </DropdownMenuItem>
-
-        <hr className="mb-1 mt-1 border-gray-200 dark:border-gray-700" />
-
-        <DropdownMenuItem>Settings</DropdownMenuItem>
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
