@@ -15,7 +15,6 @@ export default async function Dashboard({
   const { userId } = auth();
   if (!userId) notFound();
 
-  console.log({ params });
   const dashboard = await api.dashboard.getDashboard(Number(params.id));
 
   void api.dashboard.getDashboard.prefetch(Number(params.id));

@@ -20,8 +20,6 @@ export default async function Dashboard() {
 
   void api.dashboard.listDashboards.prefetch(userId);
 
-  console.log({ dashboards });
-
   return (
     <>
       <section className="flex min-h-64 min-w-full flex-col items-center justify-center gap-12 bg-gradient-to-b from-slate-900 px-4 py-16">

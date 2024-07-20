@@ -20,12 +20,6 @@ export function Header() {
     [pathname],
   );
 
-  console.log({
-    pathname,
-    isOnMainLayout,
-    isOnDashboard,
-  });
-
   return (
     <header
       className={`flex flex-row justify-between gap-2 p-2 ${isOnMainLayout ? "bg-slate-900" : "bg-gradient-to-b from-slate-900"}`}
