@@ -1,0 +1,1 @@
+ALTER TABLE "portalatme"."link" ADD COLUMN "dashboard_id" serial NOT NULL;
