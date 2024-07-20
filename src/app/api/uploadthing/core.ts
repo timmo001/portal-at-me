@@ -3,8 +3,6 @@ import { createUploadthing, type FileRouter } from "uploadthing/next";
 import { UploadThingError } from "uploadthing/server";
 import { UploadedFileData } from "uploadthing/types";
 
-import { users } from "~/server/db/schema";
-
 const f = createUploadthing();
 
 async function middleware({ req }: { req: Request }): Promise<{
