@@ -8,5 +8,5 @@ export default {
   dbCredentials: {
     url: env.POSTGRES_URL,
   },
-  tablesFilter: ["portal-at-me_*"],
+  schemaFilter: ["portalatme"],
 } satisfies Config;
