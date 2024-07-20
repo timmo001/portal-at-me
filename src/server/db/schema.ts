@@ -5,6 +5,7 @@ import { relations, sql } from "drizzle-orm";
 import {
   index,
   integer,
+  pgEnum,
   pgSchema,
   serial,
   timestamp,
@@ -13,6 +14,13 @@ import {
 
 export const mySchema = pgSchema("portalatme");
 
+export const searchEnum = pgEnum("search", [
+  "bing",
+  "chatgpt",
+  "duckduckgo",
+  "google",
+]);
+
 export const dashboards = mySchema.table(
   "dashboard",
   {
@@ -20,6 +28,7 @@ export const dashboards = mySchema.table(
     name: varchar("name", { length: 100 }).notNull(),
     description: varchar("description", {}),
     userId: varchar("user_id", {}).notNull(),
+    search: searchEnum("search"),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),

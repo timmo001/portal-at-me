@@ -6,6 +6,7 @@ import { api } from "~/trpc/server";
 import { Button } from "~/components/ui/button";
 
 import { CreateLink } from "~/components/create-link";
+import { SearchBar } from "~/components/search-bar";
 
 export default async function Dashboard({
   params,
@@ -24,7 +25,7 @@ export default async function Dashboard({
 
   return (
     <>
-      <section className="w-lg container flex min-h-64 flex-col items-center justify-center">
+      <section className="container flex min-h-32 flex-col items-center justify-center">
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
           {dashboard.name}
         </h1>
@@ -32,26 +33,33 @@ export default async function Dashboard({
           {dashboard.description}
         </h2>
       </section>
-      <section className="grid grid-cols-1 items-center gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {dashboard.dashboardLinks.map((link) => (
-          <a
-            key={link.id}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              className="flex h-48 w-72 flex-col items-center justify-center gap-2"
-              variant="outline"
+      {dashboard.search && (
+        <section className="container flex min-h-28 flex-col items-center justify-center">
+          <SearchBar provider={dashboard.search} />
+        </section>
+      )}
+      <section className="container flex flex-col items-center justify-center">
+        <div className="grid grid-cols-1 items-center gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {dashboard.dashboardLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Link size={24} />
-              <span className="text-center text-xl font-medium">
-                {link.title}
-              </span>
-            </Button>
-          </a>
-        ))}
-        <CreateLink dashboardId={dashboard.id} />
+              <Button
+                className="flex h-48 w-72 flex-col items-center justify-center gap-2"
+                variant="outline"
+              >
+                <Link size={24} />
+                <span className="text-center text-xl font-medium">
+                  {link.title}
+                </span>
+              </Button>
+            </a>
+          ))}
+          <CreateLink dashboardId={dashboard.id} />
+        </div>
       </section>
     </>
   );

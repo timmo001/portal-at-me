@@ -15,12 +15,22 @@ import {
   FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/ui/select";
+import { searchEnum } from "~/server/db/schema";
+import { searchNameMap } from "~/components/search-bar";
 
 const FormSchema = z.object({
   name: z.string().min(1, {
     message: "Name is required",
   }),
   description: z.string().optional(),
+  search: z.enum(searchEnum.enumValues).optional(),
 });
 
 export default function DashboardUpdate({
@@ -46,6 +56,7 @@ export default function DashboardUpdate({
     defaultValues: {
       name: dashboard?.name || "",
       description: dashboard?.description || "",
+      search: dashboard?.search || undefined,
     },
   });
 
@@ -54,6 +65,7 @@ export default function DashboardUpdate({
       id: Number(params.id),
       name: data.name,
       description: data.description,
+      search: data.search,
     };
     console.log("Update dashboard:", req);
     updateDashboard.mutate(req);
@@ -100,6 +112,35 @@ export default function DashboardUpdate({
                       {...field}
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="search"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Search Engine</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    required={false}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="None" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {/* <SelectItem value={undefined}>None</SelectItem> */}
+                      {searchEnum.enumValues.map((value) => (
+                        <SelectItem key={value} value={value}>
+                          {searchNameMap[value]}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}
