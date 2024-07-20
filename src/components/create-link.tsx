@@ -70,8 +70,8 @@ export function CreateLink({ dashboardId }: { dashboardId: number }) {
   return (
     <>
       <Button
-        className="flex h-48 w-72 flex-col items-center justify-center gap-2 opacity-40 transition-opacity duration-200 hover:opacity-100"
-        variant="outline"
+        className="flex h-48 w-72 flex-col items-center justify-center gap-2 opacity-30 transition-all duration-300 hover:opacity-100"
+        variant="ghost"
         onClick={() => setCreateLinkOpen(true)}
       >
         <Link size={24} />
