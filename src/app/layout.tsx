@@ -1,5 +1,3 @@
-import "~/styles/globals.css";
-
 import { type Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import {
@@ -18,6 +16,8 @@ import { ourFileRouter } from "~/app/api/uploadthing/core";
 import { ThemePicker } from "~/components/theme-picker";
 import { ThemeProvider } from "~/components/ui/theme-provider";
 import { TRPCReactProvider } from "~/trpc/react";
+
+import "~/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Portal@Me",

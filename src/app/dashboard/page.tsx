@@ -1,9 +1,9 @@
-import { SignedIn, SignedOut, SignUpButton } from "@clerk/nextjs";
+import { Plus } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "~/components/ui/button";
 
-export default async function Home() {
+export default async function Dashboard() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b">
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
@@ -15,12 +15,10 @@ export default async function Home() {
         </div>
         <div className="flex flex-col items-center gap-2">
           <Button variant="default" size="lg">
-            <SignedOut>
-              <SignUpButton mode="modal">Get Started</SignUpButton>
-            </SignedOut>
-            <SignedIn>
-              <Link href="/dashboard">Dashboard</Link>
-            </SignedIn>
+            <Link href="/dashboard/create">
+              <Plus size={24} />
+              Create New
+            </Link>
           </Button>
         </div>
       </div>
