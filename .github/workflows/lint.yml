@@ -18,8 +18,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint-jsonlint:
-    uses: timmo001/workflows/.github/workflows/lint-jsonlint.yml@master
   lint-markdown-links:
     uses: timmo001/workflows/.github/workflows/lint-markdown-links.yml@master
   lint-markdownlint:
