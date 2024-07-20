@@ -37,14 +37,16 @@ export default function DashboardCreate() {
 
   return (
     <>
-      <section className="container flex min-h-64 flex-col items-center justify-center gap-12 px-4 py-16">
+      <section className="w-lg container flex min-h-64 flex-col items-center justify-center">
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
           Create New Dashboard
         </h1>
+      </section>
+      <section className="container flex min-h-64 flex-col items-center justify-center">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="w-2/3 space-y-6"
+            className="w-2/3 max-w-screen-sm space-y-6"
           >
             <FormField
               control={form.control}
@@ -66,13 +68,25 @@ export default function DashboardCreate() {
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
-                    <Input placeholder="A dashboard for my homepage." {...field} />
+                    <Input
+                      placeholder="A dashboard for my homepage."
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit">Submit</Button>
+            <div className="pt-4">
+              <Button
+                type="submit"
+                variant="default"
+                size="lg"
+                className="w-full"
+              >
+                Create
+              </Button>
+            </div>
           </form>
         </Form>
       </section>
