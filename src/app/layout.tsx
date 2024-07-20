@@ -1,10 +1,10 @@
 import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
+import { Inter as FontSans } from "next/font/google";
 import { type Metadata } from "next";
 
 import { cn } from "~/lib/utils";
-import { ModeToggle } from "~/components/theme-toggle";
+import { Menu } from "~/components/menu";
 import { ThemeProvider } from "~/components/ui/theme-provider";
 import { TRPCReactProvider } from "~/trpc/react";
 
@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/icon" }],
 };
 
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -21,8 +26,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "bg-background min-h-screen font-sans antialiased",
-        GeistSans.variable,
+        "min-h-screen bg-background font-sans antialiased",
+        fontSans.variable,
       )}
     >
       <body>
@@ -33,7 +38,12 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <ModeToggle />
+            <header className="flex flex-row justify-between gap-2 p-2">
+              <div className="flex items-center gap-2">
+                {/* <h1 className="text-2xl font-semibold">Portal@Me</h1> */}
+              </div>
+              <Menu />
+            </header>
             {children}
           </ThemeProvider>
         </TRPCReactProvider>
