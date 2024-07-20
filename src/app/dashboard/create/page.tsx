@@ -1,9 +1,10 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+import { api } from "~/trpc/react";
 import { Button } from "~/components/ui/button";
 import {
   Form,
@@ -14,6 +15,7 @@ import {
   FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
+import { useAuth } from "@clerk/nextjs";
 
 const FormSchema = z.object({
   name: z.string().min(1, {
@@ -23,6 +25,16 @@ const FormSchema = z.object({
 });
 
 export default function DashboardCreate() {
+  const router = useRouter();
+  const auth = useAuth();
+  const utils = api.useUtils();
+  const createDashboard = api.dashboard.createDashboard.useMutation({
+    onSuccess: async () => {
+      await utils.dashboard.invalidate();
+      router.replace("/dashboard");
+    },
+  });
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -31,8 +43,19 @@ export default function DashboardCreate() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data);
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    if (!auth.userId) {
+      console.error("User is not authenticated");
+      return;
+    }
+
+    const req = {
+      name: data.name,
+      description: data.description,
+      userId: auth.userId,
+    };
+    console.log("Create dashboard:", req);
+    createDashboard.mutate(req);
   }
 
   return (
@@ -79,12 +102,13 @@ export default function DashboardCreate() {
             />
             <div className="pt-4">
               <Button
+                disabled={createDashboard.isPending}
                 type="submit"
                 variant="default"
                 size="lg"
                 className="w-full"
               >
-                Create
+                {createDashboard.isPending ? "Creating..." : "Create"}
               </Button>
             </div>
           </form>
