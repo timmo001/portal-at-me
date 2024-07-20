@@ -1,3 +1,4 @@
+import { Button } from "~/components/ui/button";
 import { api, HydrateClient } from "~/trpc/server";
 
 export default async function Home() {
@@ -12,7 +13,14 @@ export default async function Home() {
           <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
             Portal<span className="text-indigo-600">@</span>Me
           </h1>
-          <div className="flex flex-col items-center gap-2"></div>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-center text-lg">A portal to your world.</p>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Button variant="default" size="lg">
+              Get Started
+            </Button>
+          </div>
         </div>
       </main>
     </HydrateClient>
