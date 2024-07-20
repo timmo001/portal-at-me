@@ -1,4 +1,4 @@
-import { asc, desc, eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
@@ -32,4 +32,21 @@ export const dashboardRouter = createTRPCRouter({
       with: { dashboardLinks: true },
     });
   }),
+  updateDashboard: publicProcedure
+    .input(
+      z.object({
+        id: z.number(),
+        name: z.string().min(1),
+        description: z.string().optional(),
+      }),
+    )
+    .mutation(async ({ ctx, input }) => {
+      await ctx.db
+        .update(dashboards)
+        .set({
+          name: input.name,
+          description: input.description,
+        })
+        .where(eq(dashboards.id, input.id));
+    }),
 });
