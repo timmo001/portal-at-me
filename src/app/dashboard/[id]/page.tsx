@@ -1,5 +1,6 @@
-import { auth } from "@clerk/nextjs/server";
 import { notFound } from "next/navigation";
+import { auth } from "@clerk/nextjs/server";
+import { Link } from "lucide-react";
 
 import { api } from "~/trpc/server";
 import { Button } from "~/components/ui/button";
@@ -32,17 +33,22 @@ export default async function Dashboard({
           {dashboard.description}
         </h2>
       </section>
-      <section className="w-lg container flex min-h-64 flex-col items-center justify-center">
+      <section className="grid grid-cols-1 items-center gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {dashboard.dashboardLinks.map((link) => (
           <a
             key={link.id}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
           >
-            <Button className="h-48 w-72" variant="outline">
-              <span className="text-center">{link.title}</span>
+            <Button
+              className="flex h-48 w-72 flex-col items-center justify-center gap-2"
+              variant="outline"
+            >
+              <Link size={24} />
+              <span className="text-center text-xl font-medium">
+                {link.title}
+              </span>
             </Button>
           </a>
         ))}
