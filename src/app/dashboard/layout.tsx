@@ -8,7 +8,7 @@ export default function SignedInLayout({
   return (
     <main className="flex flex-col items-center justify-start">
       <SignedOut>
-        <section className="container flex min-h-96 flex-col items-center justify-center gap-12 bg-gradient-to-b from-slate-900 px-4 py-16">
+        <section className="flex min-h-96 min-w-full flex-col items-center justify-center gap-12 px-4 py-16">
           <p className="text-center text-2xl font-light">
             You must be{" "}
             <span className="text-indigo-600">
