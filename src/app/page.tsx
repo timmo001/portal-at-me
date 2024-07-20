@@ -1,5 +1,8 @@
-import { Button } from "~/components/ui/button";
+import { SignedIn, SignedOut, SignUpButton } from "@clerk/nextjs";
+import Link from "next/link";
+
 import { api, HydrateClient } from "~/trpc/server";
+import { Button } from "~/components/ui/button";
 
 export default async function Home() {
   // const hello = await api.link.hello({ text: "from Portal@Me" });
@@ -18,7 +21,12 @@ export default async function Home() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <Button variant="default" size="lg">
-              Get Started
+              <SignedOut>
+                <SignUpButton mode="modal">Get Started</SignUpButton>
+              </SignedOut>
+              <SignedIn>
+                <Link href="/dashboard">Dashboard</Link>
+              </SignedIn>
             </Button>
           </div>
         </div>
