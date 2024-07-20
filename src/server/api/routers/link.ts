@@ -4,7 +4,7 @@ import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { links } from "~/server/db/schema";
 
 export const linkRouter = createTRPCRouter({
-  create: publicProcedure
+  createLink: publicProcedure
     .input(
       z.object({
         title: z.string().min(1),
@@ -13,9 +13,6 @@ export const linkRouter = createTRPCRouter({
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      // simulate a slow db call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
       await ctx.db.insert(links).values({
         title: input.title,
         url: input.url,

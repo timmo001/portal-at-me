@@ -2,7 +2,9 @@ import { auth } from "@clerk/nextjs/server";
 import { notFound } from "next/navigation";
 
 import { api } from "~/trpc/server";
-import { Card, CardHeader, CardTitle } from "~/components/ui/card";
+import { Button } from "~/components/ui/button";
+
+import { CreateLink } from "~/components/create-link";
 
 export default async function Dashboard({
   params,
@@ -39,13 +41,12 @@ export default async function Dashboard({
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
           >
-            <Card className="h-48 w-72">
-              <CardHeader>
-                <CardTitle>{link.title}</CardTitle>
-              </CardHeader>
-            </Card>
+            <Button className="h-48 w-72" variant="outline">
+              <span className="text-center">{link.title}</span>
+            </Button>
           </a>
         ))}
+        <CreateLink dashboardId={dashboard.id} />
       </section>
     </>
   );
