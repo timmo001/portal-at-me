@@ -61,7 +61,7 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              <header className="flex flex-row justify-between gap-2 p-2">
+              <header className="bg-slate-900 flex flex-row justify-between gap-2 p-2">
                 <div className="flex items-center gap-2">
                   {/* <h1 className="text-2xl font-semibold">Portal@Me</h1> */}
                 </div>

@@ -5,25 +5,31 @@ import { Button } from "~/components/ui/button";
 
 export default async function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
+    <main className="flex min-h-[48.0rem] flex-col items-center justify-center bg-gradient-to-b from-slate-900">
+      <section className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
           Portal<span className="text-indigo-600">@</span>Me
         </h1>
-        <div className="flex flex-col items-center gap-2">
-          <p className="text-center text-lg">A portal to your world.</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <Button variant="default" size="lg">
-            <SignedOut>
-              <SignUpButton mode="modal">Get Started</SignUpButton>
-            </SignedOut>
-            <SignedIn>
-              <Link href="/dashboard">Dashboard</Link>
-            </SignedIn>
-          </Button>
-        </div>
-      </div>
+        <p className="text-center text-2xl font-light">
+          A portal to your world.
+        </p>
+      </section>
+      <section className="flex flex-col items-center gap-2">
+        <SignedOut>
+          <SignUpButton mode="modal">
+            <Button variant="default" size="lg">
+              Get Started
+            </Button>
+          </SignUpButton>
+        </SignedOut>
+        <SignedIn>
+          <Link href="/dashboard">
+            <Button variant="default" size="lg">
+              Dashboard
+            </Button>
+          </Link>
+        </SignedIn>
+      </section>
     </main>
   );
 }
