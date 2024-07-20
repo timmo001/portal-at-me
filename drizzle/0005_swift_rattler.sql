@@ -1,0 +1,1 @@
+ALTER TABLE "portalatme"."dashboard" RENAME COLUMN "show_title" TO "show_name";

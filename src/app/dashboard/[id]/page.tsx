@@ -25,14 +25,20 @@ export default async function Dashboard({
 
   return (
     <>
-      <section className="container flex min-h-32 flex-col items-center justify-center">
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-          {dashboard.name}
-        </h1>
-        <h2 className="text-xl font-semibold text-gray-500">
-          {dashboard.description}
-        </h2>
-      </section>
+      {(dashboard.showName || dashboard.showDescription) && (
+        <section className="container flex min-h-32 flex-col items-center justify-center">
+          {dashboard.showName && (
+            <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
+              {dashboard.name}
+            </h1>
+          )}
+          {dashboard.showDescription && (
+            <h2 className="text-xl font-semibold text-gray-500">
+              {dashboard.description}
+            </h2>
+          )}
+        </section>
+      )}
       {dashboard.search && (
         <section className="container flex min-h-28 flex-col items-center justify-center">
           <SearchBar provider={dashboard.search} />

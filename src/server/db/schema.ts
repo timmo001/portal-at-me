@@ -3,6 +3,7 @@
 
 import { relations, sql } from "drizzle-orm";
 import {
+  boolean,
   index,
   integer,
   pgEnum,
@@ -29,6 +30,8 @@ export const dashboards = mySchema.table(
     description: varchar("description", {}),
     userId: varchar("user_id", {}).notNull(),
     search: searchEnum("search"),
+    showName: boolean("show_name").default(true).notNull(),
+    showDescription: boolean("show_description").default(true).notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),

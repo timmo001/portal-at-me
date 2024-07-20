@@ -39,6 +39,8 @@ export const dashboardRouter = createTRPCRouter({
         name: z.string().min(1),
         description: z.string().optional(),
         search: z.enum(dashboards.search.enumValues).optional(),
+        showName: z.boolean(),
+        showDescription: z.boolean(),
       }),
     )
     .mutation(async ({ ctx, input }) => {
@@ -48,6 +50,8 @@ export const dashboardRouter = createTRPCRouter({
           name: input.name,
           description: input.description,
           search: input.search,
+          showName: input.showName,
+          showDescription: input.showDescription,
         })
         .where(eq(dashboards.id, input.id));
     }),

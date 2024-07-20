@@ -24,6 +24,7 @@ import {
 } from "~/components/ui/select";
 import { searchEnum } from "~/server/db/schema";
 import { searchNameMap } from "~/components/search-bar";
+import { Switch } from "~/components/ui/switch";
 
 const FormSchema = z.object({
   name: z.string().min(1, {
@@ -31,6 +32,8 @@ const FormSchema = z.object({
   }),
   description: z.string().optional(),
   search: z.enum(searchEnum.enumValues).optional(),
+  showName: z.boolean(),
+  showDescription: z.boolean(),
 });
 
 export default function DashboardUpdate({
@@ -57,15 +60,15 @@ export default function DashboardUpdate({
       name: dashboard?.name || "",
       description: dashboard?.description || "",
       search: dashboard?.search || undefined,
+      showName: dashboard?.showName || true,
+      showDescription: dashboard?.showDescription || true,
     },
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     const req = {
       id: Number(params.id),
-      name: data.name,
-      description: data.description,
-      search: data.search,
+      ...data,
     };
     console.log("Update dashboard:", req);
     updateDashboard.mutate(req);
@@ -141,6 +144,38 @@ export default function DashboardUpdate({
                       ))}
                     </SelectContent>
                   </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="showName"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-center justify-between">
+                  <FormLabel>Show Name</FormLabel>
+                  <FormControl>
+                    <Switch
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="showDescription"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-center justify-between">
+                  <FormLabel>Show Description</FormLabel>
+                  <FormControl>
+                    <Switch
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}

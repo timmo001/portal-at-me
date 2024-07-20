@@ -1,0 +1,2 @@
+ALTER TABLE "portalatme"."dashboard" ADD COLUMN "show_title" boolean DEFAULT true NOT NULL;--> statement-breakpoint
+ALTER TABLE "portalatme"."dashboard" ADD COLUMN "show_description" boolean DEFAULT true NOT NULL;
