@@ -74,6 +74,11 @@
   dependencies:
     cheerio "1.0.0-rc.11"
 
+"@drizzle-team/brocli@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@drizzle-team/brocli/-/brocli-0.8.2.tgz#a397253fa1094b16f761b776f39dbdd119838ef7"
+  integrity sha512-zTrFENsqGvOkBOuHDC1pXCkDXNd2UhP4lI3gYGhQ1R1SPeAAfqzPsV1dcpMy4uNU6kB5VpU5NGhvwxVNETR02A==
+
 "@effect/schema@0.68.12":
   version "0.68.12"
   resolved "https://registry.yarnpkg.com/@effect/schema/-/schema-0.68.12.tgz#e530485e049a04eb0ce8698ea3294d2feac1afbb"
@@ -1718,11 +1723,12 @@ dot-case@^3.0.4:
     no-case "^3.0.4"
     tslib "^2.0.3"
 
-drizzle-kit@0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.23.0.tgz#4ac8b4034a75091569666242e99df7bafd590148"
-  integrity sha512-w9jE97z193dd4jzAyj4Uv2SOh8Ydue70Ki6W0awy4bGM1aPXan6zD6Yv+nNTA6oGgNTDl2MJFxutjHG4fden5g==
+drizzle-kit@0.23.1:
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.23.1.tgz#16ea45b3c66b2f35004780ef7dc650d86788ee5f"
+  integrity sha512-posGQhj8/K4S4CPhk7BO9+IcpNdIh96t0DvcAr/NvMKhPhe5D0MELzmpq9R2MpmSP3fd+Z3upwidtetrw7xnjg==
   dependencies:
+    "@drizzle-team/brocli" "^0.8.2"
     "@esbuild-kit/esm-loader" "^2.5.5"
     esbuild "^0.19.7"
     esbuild-register "^3.5.0"
