@@ -5,7 +5,7 @@ import { Button } from "~/components/ui/button";
 
 export default async function Home() {
   return (
-    <main className="flex min-h-[48.0rem] flex-col items-center justify-center bg-gradient-to-b from-slate-900">
+    <main className="flex min-h-[48.0rem] flex-col items-center justify-center bg-gradient-to-b from-slate-800 dark:from-slate-900">
       <section className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
           Portal<span className="text-indigo-600">@</span>Me

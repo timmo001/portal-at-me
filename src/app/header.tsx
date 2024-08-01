@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header
-      className={`flex flex-row justify-between gap-2 p-2 ${isOnMainLayout ? "bg-slate-900" : "bg-gradient-to-b from-slate-900"}`}
+      className={`flex flex-row justify-between gap-2 p-2 ${isOnMainLayout ? "bg-slate-800 dark:bg-slate-900" : "bg-slate-800 dark:bg-transparent"}`}
     >
       <div className="flex items-center gap-2"></div>
       <div className="flex flex-row items-center gap-2">

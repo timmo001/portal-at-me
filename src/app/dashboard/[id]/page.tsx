@@ -97,7 +97,7 @@ export default async function Dashboard({
                 }}
               >
                 <div className="w-full rounded-bl-sm rounded-br-sm bg-slate-950 bg-opacity-60 px-2 py-2">
-                  <span className="text-center text-xl font-medium opacity-100">
+                  <span className="text-center text-xl font-medium text-slate-50 opacity-100">
                     {link.title}
                   </span>
                 </div>
