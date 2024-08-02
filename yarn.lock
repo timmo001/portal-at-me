@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@clerk/backend@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.5.0.tgz#12318117d2d6f29ece78dddc7eb9f68ad583df7d"
-  integrity sha512-uJUcA4oIDfTkjhjcjnlnarjuLXp5rVvtXB1/HtFKLXfvm8SveH5D3w97IeiUDNMvggxBo1Q/faBDBjEJxTV9Cw==
+"@clerk/backend@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@clerk/backend/-/backend-1.5.1.tgz#e3e54746ca3ed866f51a250aaeedc91c51965af5"
+  integrity sha512-z1YdxaXDYht7KdZy8s15tdmR0VXkTgemDf1EezVuCl27KeigX5W/H3yJHJCtXzJPZNXpIu6/nU4sy+nX0q5ivg==
   dependencies:
     "@clerk/shared" "2.4.2"
     "@clerk/types" "4.10.0"
@@ -27,12 +27,12 @@
     "@clerk/types" "4.10.0"
     tslib "2.4.1"
 
-"@clerk/nextjs@5.2.9":
-  version "5.2.9"
-  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-5.2.9.tgz#82a5f08b2e68fd341e876c41f18332d2ee919ad6"
-  integrity sha512-7RKF5Pnv80n58niDS+8Fkn03HTm4/zkceplQh2fN0bjH8WDwRXxB/YWtgC1IFLbZ0PeiHzo1nVRguTSuUqo1+Q==
+"@clerk/nextjs@5.2.11":
+  version "5.2.11"
+  resolved "https://registry.yarnpkg.com/@clerk/nextjs/-/nextjs-5.2.11.tgz#482d2278c89efa34171cfe0daff0d4d7110a783d"
+  integrity sha512-owl4je98oBtIo3B3WM5ytugt5kwjhDRzdANscaqJeIvGm0v8k/5AThm/OFBJe6uxJ4PnefqEtgELcZMvg8avEg==
   dependencies:
-    "@clerk/backend" "1.5.0"
+    "@clerk/backend" "1.5.1"
     "@clerk/clerk-react" "5.3.0"
     "@clerk/shared" "2.4.2"
     "@clerk/types" "4.10.0"
