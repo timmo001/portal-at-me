@@ -1,8 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useAuth } from "@clerk/nextjs";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import { api } from "~/trpc/react";
 import { Button } from "~/components/ui/button";
@@ -15,7 +16,6 @@ import {
   FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
-import { useAuth } from "@clerk/nextjs";
 
 const FormSchema = z.object({
   name: z.string().min(1, {
