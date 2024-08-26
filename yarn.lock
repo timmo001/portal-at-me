@@ -1688,10 +1688,10 @@ dot-case@^3.0.4:
     no-case "^3.0.4"
     tslib "^2.0.3"
 
-drizzle-kit@0.24.1:
-  version "0.24.1"
-  resolved "https://registry.npmjs.org/drizzle-kit/-/drizzle-kit-0.24.1.tgz"
-  integrity sha512-y47ZuFpy3ZEz5v2P4Q4m7CZpC9infdmFAVP8klfl92hyBBvgWlyFnriDkycK2HXqB1PrYWNTck2p5TfFY5+EWw==
+drizzle-kit@0.24.2:
+  version "0.24.2"
+  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.24.2.tgz#928a56a6a2bec1c5725321f559ec51dc5a943412"
+  integrity sha512-nXOaTSFiuIaTMhS8WJC2d4EBeIcN9OSt2A2cyFbQYBAZbi7lRsVGJNqDpEwPqYfJz38yxbY/UtbvBBahBfnExQ==
   dependencies:
     "@drizzle-team/brocli" "^0.10.1"
     "@esbuild-kit/esm-loader" "^2.5.5"
