@@ -751,10 +751,10 @@
     "@radix-ui/react-use-callback-ref" "1.1.0"
     "@radix-ui/react-use-controllable-state" "1.1.0"
 
-"@radix-ui/react-select@2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-select/-/react-select-2.1.4.tgz#8957050203640b668a883a225260c403514b3772"
-  integrity sha512-pOkb2u8KgO47j/h7AylCj7dJsm69BXcjkrvTqMptFqsE2i0p8lHkfgneXKjAgPzBMivnoMyt8o4KiV4wYzDdyQ==
+"@radix-ui/react-select@2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-select/-/react-select-2.1.5.tgz#f005e61f7c04e9d6105baa271569868fd08db41a"
+  integrity sha512-eVV7N8jBXAXnyrc+PsOF89O9AfVgGnbLxUtBb0clJ8y8ENMWLARGMI/1/SBRLz7u4HqxLgN71BJ17eono3wcjA==
   dependencies:
     "@radix-ui/number" "1.1.0"
     "@radix-ui/primitive" "1.1.1"
@@ -762,7 +762,7 @@
     "@radix-ui/react-compose-refs" "1.1.1"
     "@radix-ui/react-context" "1.1.1"
     "@radix-ui/react-direction" "1.1.0"
-    "@radix-ui/react-dismissable-layer" "1.1.3"
+    "@radix-ui/react-dismissable-layer" "1.1.4"
     "@radix-ui/react-focus-guards" "1.1.1"
     "@radix-ui/react-focus-scope" "1.1.1"
     "@radix-ui/react-id" "1.1.0"
@@ -775,8 +775,8 @@
     "@radix-ui/react-use-layout-effect" "1.1.0"
     "@radix-ui/react-use-previous" "1.1.0"
     "@radix-ui/react-visually-hidden" "1.1.1"
-    aria-hidden "^1.1.1"
-    react-remove-scroll "^2.6.1"
+    aria-hidden "^1.2.4"
+    react-remove-scroll "^2.6.2"
 
 "@radix-ui/react-slot@1.1.1":
   version "1.1.1"
@@ -2485,13 +2485,6 @@ internal-slot@^1.0.7:
     hasown "^2.0.0"
     side-channel "^1.0.4"
 
-invariant@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
-  integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
-  dependencies:
-    loose-envify "^1.0.0"
-
 is-array-buffer@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/is-array-buffer/-/is-array-buffer-3.0.4.tgz"
@@ -2819,7 +2812,7 @@ lodash.merge@^4.6.2:
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -3262,18 +3255,7 @@ react-remove-scroll-bar@^2.3.7:
     react-style-singleton "^2.2.2"
     tslib "^2.0.0"
 
-react-remove-scroll@^2.6.1:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/react-remove-scroll/-/react-remove-scroll-2.6.2.tgz#2518d2c5112e71ea8928f1082a58459b5c7a2a97"
-  integrity sha512-KmONPx5fnlXYJQqC62Q+lwIeAk64ws/cUw6omIumRzMRPqgnYqhSSti99nbj0Ry13bv7dF+BKn7NB+OqkdZGTw==
-  dependencies:
-    react-remove-scroll-bar "^2.3.7"
-    react-style-singleton "^2.2.1"
-    tslib "^2.1.0"
-    use-callback-ref "^1.3.3"
-    use-sidecar "^1.1.2"
-
-react-remove-scroll@^2.6.2:
+react-remove-scroll@^2.6.1, react-remove-scroll@^2.6.2:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/react-remove-scroll/-/react-remove-scroll-2.6.3.tgz#df02cde56d5f2731e058531f8ffd7f9adec91ac2"
   integrity sha512-pnAi91oOk8g8ABQKGF5/M9qxmmOPxaAnopyTHYfqYEwJhyFrbbBtHuSgtKEoH0jpcxx5o3hXqH1mNd9/Oi+8iQ==
@@ -3283,15 +3265,6 @@ react-remove-scroll@^2.6.2:
     tslib "^2.1.0"
     use-callback-ref "^1.3.3"
     use-sidecar "^1.1.3"
-
-react-style-singleton@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.1.tgz"
-  integrity sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==
-  dependencies:
-    get-nonce "^1.0.0"
-    invariant "^2.2.4"
-    tslib "^2.0.0"
 
 react-style-singleton@^2.2.2, react-style-singleton@^2.2.3:
   version "2.2.3"
@@ -3892,14 +3865,6 @@ use-callback-ref@^1.3.3:
   resolved "https://registry.yarnpkg.com/use-callback-ref/-/use-callback-ref-1.3.3.tgz#98d9fab067075841c5b2c6852090d5d0feabe2bf"
   integrity sha512-jQL3lRnocaFtu3V00JToYz/4QkNWswxijDaCVNZRiRTO3HQDLsdu1ZtmIUvV4yPp+rvWm5j0y0TG/S61cuijTg==
   dependencies:
-    tslib "^2.0.0"
-
-use-sidecar@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.2.tgz"
-  integrity sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==
-  dependencies:
-    detect-node-es "^1.1.0"
     tslib "^2.0.0"
 
 use-sidecar@^1.1.3:
