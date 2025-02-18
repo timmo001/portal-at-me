@@ -720,13 +720,6 @@
     "@radix-ui/react-compose-refs" "1.1.1"
     "@radix-ui/react-use-layout-effect" "1.1.0"
 
-"@radix-ui/react-primitive@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-primitive/-/react-primitive-2.0.1.tgz#6d9efc550f7520135366f333d1e820cf225fad9e"
-  integrity sha512-sHCWTtxwNn3L3fH8qAfnF3WbUZycW93SM1j3NFDzXBiz8D6F5UTTy8G1+WFEaiCdvCVRJWj6N2R4Xq6HdiHmDg==
-  dependencies:
-    "@radix-ui/react-slot" "1.1.1"
-
 "@radix-ui/react-primitive@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-primitive/-/react-primitive-2.0.2.tgz#ac8b7854d87b0d7af388d058268d9a7eb64ca8ef"
@@ -775,13 +768,6 @@
     "@radix-ui/react-visually-hidden" "1.1.2"
     aria-hidden "^1.2.4"
     react-remove-scroll "^2.6.3"
-
-"@radix-ui/react-slot@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.1.1.tgz#ab9a0ffae4027db7dc2af503c223c978706affc3"
-  integrity sha512-RApLLOcINYJA+dMVbOju7MYv1Mb2EBp2nH4HdDzXTSyaR5optlm6Otrz1euW3HbdOR8UmmFK06TD+A9frYWv+g==
-  dependencies:
-    "@radix-ui/react-compose-refs" "1.1.1"
 
 "@radix-ui/react-slot@1.1.2":
   version "1.1.2"
@@ -898,10 +884,10 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.66.4.tgz#44b87bff289466adbfa0de8daa5756cbd2d61c61"
   integrity sha512-skM/gzNX4shPkqmdTCSoHtJAPMTtmIJNS0hE+xwTTUVYwezArCT34NMermABmBVUg5Ls5aiUXEDXfqwR1oVkcA==
 
-"@tanstack/react-query@5.66.4":
-  version "5.66.4"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.66.4.tgz#d626997660bb4aac585037cdd85d1e8ddd77ace1"
-  integrity sha512-zLlb9Ij7msRazeJP1LUu+tkrxWnUujYanUbY0c2lFoXhRwXvRt6SIwCuwCAmYgMeEuvIlv9/zIQb7bhhGR0jhw==
+"@tanstack/react-query@5.66.6":
+  version "5.66.6"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.66.6.tgz#fa79101069aa2367c0112b0fd7bb1f409f6fc421"
+  integrity sha512-Xepc53h+D5sqoO/MZiSH2ROVLTDfRwR+3E4C2oS71/lo9u2mwbneZIEyIGXEHvmfyQpqtbf9voghD+QwLDLzcA==
   dependencies:
     "@tanstack/query-core" "5.66.4"
 
