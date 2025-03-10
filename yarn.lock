@@ -2855,10 +2855,10 @@ lru-cache@^10.2.0:
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
-lucide-react@0.478.0:
-  version "0.478.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.478.0.tgz#21be1a58cc421a7ccf3ccf09bd062775783d90e9"
-  integrity sha512-aO8e1ZQEjh/0LcEjm08VyBAPtRSfGG/rJEUTph6/Bfi4GrosZKOawUoc0+JBGSslM04bRWaOTkCCzq+pVrUCnQ==
+lucide-react@0.479.0:
+  version "0.479.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.479.0.tgz#7321f979a389ec5dd86747b2deb6444cf0922f8d"
+  integrity sha512-aBhNnveRhorBOK7uA4gDjgaf+YlHMdMhQ/3cupk6exM10hWlEU+2QtWYOfhXhjAsmdb6LeKR+NZnow4UxRRiTQ==
 
 map-obj@^4.1.0:
   version "4.3.0"
